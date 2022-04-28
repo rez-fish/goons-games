@@ -11,7 +11,9 @@ function App() {
   useEffect(() => {
     const options = {
       method: 'GET',
-      url: `https://rawg-video-games-database.p.rapidapi.com/games?key=6ab40626e1874667a43cc167804464ca&page=${page}`,
+      url: `https://rawg-video-games-database.p.rapidapi.com/games?key=${
+        import.meta.env.VITE_RAPID_API_KEY
+      }&page=${page}`,
       headers: {
         'X-RapidAPI-Host': 'rawg-video-games-database.p.rapidapi.com',
         'X-RapidAPI-Key': '19237e4112msh5882c8bcbd8e9eap129925jsnf7ee308703da',
